@@ -2,6 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/app'
 import 'firebase/database'
 import 'firebase/auth'
+import 'firebase/storage'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -21,6 +22,7 @@ const firebaseDB = firebase.database()
 const firebaseMatches = firebaseDB.ref('matches')
 const firebasePromotions = firebaseDB.ref('promotions')
 const firebaseTeams = firebaseDB.ref('teams')
+const firebasePlayers = firebaseDB.ref('players')
 
 // firebaseDB.ref('matches').once('value').then((snapshot) => console.log(snapshot.val()))
 
@@ -29,5 +31,6 @@ export {
   firebaseMatches,
   firebasePromotions,
   firebaseTeams,
-  firebaseDB
+  firebaseDB,
+  firebasePlayers
 }
