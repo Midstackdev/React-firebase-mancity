@@ -5,6 +5,7 @@ import Layout from './Hoc/Layout'
 
 import Home from './Components/home'
 import SignIn from './Components/signin'
+import TheTeam from './Components/team'
 
 import Dashboard from './Components/admin/Dashboard'
 import AdminMatches from './Components/admin/matches'
@@ -29,6 +30,7 @@ const Routes = (props) => {
         <PrivateRoute {...props} exact component={AddEditMatch} path="/admin-matches/edit-match/:id" />
         <PublicRoutes {...props} restricted={true} exact component={SignIn} path="/sign-in" />
         <PublicRoutes {...props} restricted={false} exact component={Home} path="/" />
+        <PublicRoutes {...props} restricted={false} exact component={TheTeam} path="/the-team" />
       </Switch>
     </Layout>
   )

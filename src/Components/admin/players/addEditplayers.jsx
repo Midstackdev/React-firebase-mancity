@@ -5,7 +5,6 @@ import { validate } from "../../misc/misc";
 import FileUploader from '../../misc/fileUploader'
 
 import { firebasePlayers, firebase, firebaseDB } from "../../../firebase";
-import { firebaseLooper } from "../../misc/misc";
 
 export class AddEditPlayers extends Component {
   state = {
@@ -70,7 +69,7 @@ export class AddEditPlayers extends Component {
           label: "Slect a position",
           options: [
             {key:'Keeper', value:'Keeper'},
-            {key:'Defense', value:'Defense'},
+            {key:'Defence', value:'Defence'},
             {key:'Midfield', value:'Midfiled'},
             {key:'Striker', value:'Striker'},
           ],
