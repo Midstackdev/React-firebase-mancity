@@ -6,6 +6,7 @@ import Layout from './Hoc/Layout'
 import Home from './Components/home'
 import SignIn from './Components/signin'
 import TheTeam from './Components/team'
+import TheMatches from './Components/matches'
 
 import Dashboard from './Components/admin/Dashboard'
 import AdminMatches from './Components/admin/matches'
@@ -31,6 +32,7 @@ const Routes = (props) => {
         <PublicRoutes {...props} restricted={true} exact component={SignIn} path="/sign-in" />
         <PublicRoutes {...props} restricted={false} exact component={Home} path="/" />
         <PublicRoutes {...props} restricted={false} exact component={TheTeam} path="/the-team" />
+        <PublicRoutes {...props} restricted={false} exact component={TheMatches} path="/the-matches" />
       </Switch>
     </Layout>
   )
